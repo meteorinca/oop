@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Order of Operations Practice (PEMDAS/BODMAS)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Order of Operations Practice</h1>
+
+    <div class="intro">
+      <p><strong>PEMDAS/BODMAS</strong> is the rule for which operations to do first.</p>
+      <p>Work left to right inside each level, then move to the next.</p>
+      <p class="tip">Tip: Use the mode switch. Basic avoids exponents/roots. Advanced adds brackets + powers + roots.</p>
+    </div>
+
+    <details class="more">
+      <summary>More info (steps + examples)</summary>
+      <div class="more-body">
+        <ul>
+          <li><strong>P/B</strong> – Parentheses/Brackets first</li>
+          <li><strong>E/O</strong> – Exponents/Orders (powers & roots)</li>
+          <li><strong>M/D</strong> – Multiply and Divide (left → right)</li>
+          <li><strong>A/S</strong> – Add and Subtract (left → right)</li>
+        </ul>
+        <p>Example: <span class="mono">3 + 4 × 2 = 11</span> (multiply first)</p>
+        <p>Example: <span class="mono">(8 − 2) × 3 = 18</span> (brackets first)</p>
+      </div>
+    </details>
+
+    <div class="controls">
+      <div class="control-left">
+        <label for="count">Problems</label>
+        <select id="count">
+          <option>6</option>
+          <option selected>10</option>
+          <option>12</option>
+          <option>15</option>
+        </select>
+
+        <label for="mode">Mode</label>
+        <select id="mode">
+          <option value="basic" selected>Basic (no exponents)</option>
+          <option value="advanced">Advanced (brackets + roots)</option>
+        </select>
+      </div>
+
+      <div class="control-right">
+        <button class="btn btn-new" id="btnNew">New Set</button>
+        <button class="btn btn-check" id="btnCheck">Check Answers</button>
+      </div>
+    </div>
+
+    <div id="quiz"></div>
+
+    <div class="feedback" id="globalFeedback"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
